@@ -1,9 +1,9 @@
 version: '3.8'
 
 services:
-  iris-app:
+  app:
     image: iris-system
-    container_name: iris_app
+    container_name: app
     ports:
       - 8080:8080
     depends_on:
@@ -11,10 +11,19 @@ services:
     
   db:
     image: mysql:latest
+    container_name: mysql_db
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_DATABASE: irisdb
       MYSQL_USER: admin
       MYSQL_PASSWORD: qwerty
  
+    
+  Nginx:
+    image: nginx
+    container_name: nginx
+    ports:
+      - 80:80
+    depends_on:
+      - app
     

@@ -2,3 +2,4 @@
 
 1. pack the Rails Apllication in a Docker containers.
 2. launch seperate container for mysql and connect both 
+3. lunch Nginx container and configure it as a reverse proxy to the app
