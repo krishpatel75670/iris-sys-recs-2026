@@ -5,3 +5,5 @@
 3. launch Nginx container and configure it as a reverse proxy to the app
 4. load balance across three container
 5. Enable persistence for DB data and Nginx configuration files so they remain available even when container go down
+6. for container up with single command is
+               "docker compose up" after making docker-compose.yaml file
